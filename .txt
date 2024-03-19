@@ -1,0 +1,13 @@
+{isActive: true}
+
+{age: {$gt: 26}}
+
+{$and: [{age: {$gt: 26}}, {age: {$lte: 30}}]}
+
+{$or: [{eyeColor: "brown"}, {eyeColor: "blue"}]}
+
+{eyeColor: {$not: {$eq: "green"}}}
+
+{$and: [{ eyeColor: { $nin: ['blue', 'green']}}]}
+
+Aggregations $match {company: 'FITCORE'} + $project {_id: 0, email: 1}
